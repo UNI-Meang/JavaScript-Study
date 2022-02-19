@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(179, 152, 152);
+}
+li {
+    list-style-type: none;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+.slide-wrapper {
+    position: relative;
+    width: 660px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+    /* margin-left: 60px; */
+}
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slides.animated {
+    transition: 0.5s ease-in-out;
+}
+.slides li {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(56, 112, 93);
+    float: left;
+    text-align: center;
+    color: white;
+}
+.slides li:not(:last-child) {
+    margin-right: 30px;
+}
+.controls {
+    display: flex;
+    text-align: center;
+}
+.controls .prev, .next {
+    position: absolute;
+    top: 32%;
+    border: none;
+    background-color: black;
+    color: wheat;
+    cursor: pointer;
+}
+.controls .prev {
+    left: 18%;
+}
+.controls .next {
+    left: 78%;
+}
