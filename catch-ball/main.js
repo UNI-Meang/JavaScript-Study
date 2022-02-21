@@ -49,3 +49,33 @@ function getBubble() {
     let color = `rgba(${Math.random()*360},${Math.random()*270},${Math.random()*180},0.7)` // Randomizing the color
     bubbleArray.push(new Bubble(x, y, radius, color))
 }
+
+// to get more than one bubble
+setInterval(
+    getBubble, 500
+)
+let animationId
+
+function animate() {
+    animationId = requestAnimationFrame(animate)
+    c.clearRect(0, 0, canvas.width, canvas.height)
+    bubbleArray.forEach(
+        bubble => {
+            bubble.update()
+        }
+    )
+    clickEventArray.forEach((click, clickIndex) => {
+        // console.log(click.x , bubble.x , click.y , bubble.y);
+        bubbleArray.forEach((bubble, bubbleIndex) => {
+            let dist = Math.hypot(click.x - bubble.x, click.y - bubble.y) // To find distance between two bubble
+            if ((dist - bubble.radius - click.radius) < 0) {
+                bubbleArray.splice(bubbleIndex, 1)
+                scoreCount += 1
+                console.log(scoreCount);
+                score.textContent = scoreCount
+            }
+            clickEventArray.splice(clickIndex, 1)
+        })
+    })
+
+}
