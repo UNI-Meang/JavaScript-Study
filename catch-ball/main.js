@@ -87,5 +87,10 @@ function animate() {
             clickEventArray.splice(clickIndex, 1)
         })
     })
-
 }
+
+addEventListener("click", event => {
+    clickEventArray.push(new ClickEvent(event.clientX, event.clientY - 18))
+})
+
+animate()
