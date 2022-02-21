@@ -41,6 +41,16 @@ class Bubble {
     }
 }
 
+// class for user click event position
+class ClickEvent {
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+        this.radius = 10
+        this.color = "green"
+    }
+}
+
 // To get new bubble
 function getBubble() {
     let x = Math.random() * canvas.width // to make random x position
