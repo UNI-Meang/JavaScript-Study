@@ -1,0 +1,32 @@
+/* product-list */
+position: relative;
+width: 380px;
+height: 462px;
+
+background: #FFFFFF;
+
+/* 드롭다운 화살표 */
+/* Polygon 1 */
+
+position: absolute;
+width: 12px;
+height: 8px;
+left: 11px;
+top: 9px;
+
+/* Gray 4 */
+background: #BDBDBD;
+border-radius: 1px;
+transform: rotate(180deg);
+
+/* M-button-fill (바로구매) */
+/* Rectangle 21 */
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* blue */
+background: #6327FE;
+border-radius: 5px;
