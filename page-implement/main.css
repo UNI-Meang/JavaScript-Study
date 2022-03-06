@@ -1,0 +1,12 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+li {
+    width: 380px;
+    height: 380px;
+    border: 1px solid #BDBDBD;
+    border-radius: .5rem;
+    margin-top: 10px;
+    margin-left: 30px;
+}
