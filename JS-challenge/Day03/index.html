@@ -5,25 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 03</title>
+    <style>
+        .wrapper {
+            min-width: 200px;
+            margin: 0 auto;
+            min-height: 600px;
+            background: #ffc600;
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-top: 20px;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+            font: 6rem;
+        }
+        .content {
+            width: calc(50%);
+            margin: 0 auto;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .txt {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+            color:  rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+        }
+        p{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+            color: #CB58F5;
+            font-weight: bold;
+        }
+        .msgWon, .msgLost {
+            text-align: center;
+            text-shadow: ;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5rem;
+            font-weight: 600;
+        }
+        .msgWon {
+            color: crimson;
+
+        }
+        .msgLost{
+            color: white;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Random Number Game</h1>
-    <h2>Generate a number between 0 and</h2>    
-    <input type="text">
-    <h3>Guess the number:</h3>
-    <input type="text">
-    <input type="submit" value="">
-
+    <h1>Random Number Game 🤡</h1>
+<div class="wrapper">
+    <div class="content">
+        <p class="txt">Generate a number between 0 and</p>    
+        <form id="mainGameForm">
+            <input type="number" required min="0" placeholder="Range number" class="rangeNum">
+            <p class="txt">Guess the number:</p>
+            <input type="number" required min="0" id="inptNumber" placeholder="Choose the number">
+            <input type="submit" value="play" class="btn-play">
+            <div class="hidden"></div>
+        </div>
+    </form>
+</div>
+    
     <!-- 
     1. input에 사용자 지정 숫자 입력
     1-1. 조건: 0 이상
-    1-2. 조건: 음수 안됨
+    1-2. 조건: 음수 안됨 
     2. 랜덤 숫자 추출 (함수)
     3. play 버튼 제출 시 (함수)
-    3-1. 랜덤 숫자와 사용자 입력 숫자 비교 
-    3-2. 랜덤 숫자 == 사용자 입력 숫자 you won! 출력  -->
+    3-1. 랜덤 숫자 추출 
+    3-2. 랜덤 숫자와 사용자 입력 숫자 비교 
+    3-2. 랜덤 숫자 == 사용자 입력 숫자 you won! 출력 -->
+    
 
     <script src="./main.js"></script>
 </body>
-</html>
+</html> 
