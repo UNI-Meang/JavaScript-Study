@@ -8,7 +8,7 @@ function playGame(e){
     const inputValue = inputNumber.value;
     const text = document.querySelector('.hidden');
     const randomNum = Math.ceil(Math.random() * parseInt(range));
-    text.innerHTML = `
+    text.innerHTML= `
     <p>You chose: ${inputValue}
     <p>The machine chose: ${randomNum}
     `
