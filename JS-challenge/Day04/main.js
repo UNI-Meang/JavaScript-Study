@@ -2,7 +2,6 @@ const christmasDate = '25 dec 2022';
 
 function countdown(){
     const countDate = new Date(christmasDate);
-    console.log(countDate);
     const currentDate = new Date();
 
     const totalSeconds = (countDate - currentDate) / 1000; 
