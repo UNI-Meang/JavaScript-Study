@@ -19,6 +19,8 @@ const colors = [
     "#ff3f34"
 ]; 
 
+const btn = document.querySelector('button');
+
 function randomColor(){
     const randomColor1 = colors[Math.round(Math.random() * colors.length)];
     const randomColor2 = colors[Math.round(Math.random() * colors.length)];
@@ -38,6 +40,4 @@ function randomColor(){
     // }
 }
 
-const btn = document.querySelector('button');
-console.log(btn);
 btn.addEventListener('click', randomColor);
