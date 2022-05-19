@@ -17,4 +17,22 @@ const colors = [
     "#ffa801",
     "#ffd32a",
     "#ff3f34"
-];
+]; 
+console.log(colors.length);
+const randomColorList = [];
+
+
+function randomColor(){
+    const randomColor1 = colors[Math.round(Math.random() * colors.length)];
+    const randomColor2 = colors[Math.round(Math.random() * colors.length)];
+    
+    // if(randomColor1 !== randomColor2){
+    //     document.body.style.backgroundImage = `linear-gradient(45deg, ${randomColor1}, ${randomColor2})`;
+    // } else {
+    //     randomColor();
+    // }
+}
+
+const btn = document.querySelector('button');
+console.log(btn);
+btn.addEventListener('click', randomColor);
