@@ -18,18 +18,23 @@ const colors = [
     "#ffd32a",
     "#ff3f34"
 ]; 
-console.log(colors.length);
-const randomColorList = [];
-
 
 function randomColor(){
     const randomColor1 = colors[Math.round(Math.random() * colors.length)];
     const randomColor2 = colors[Math.round(Math.random() * colors.length)];
-    
+    const color = [];
+
+    if(randomColor1 !== randomColor2){
+        color.push(randomColor1, randomColor2)
+        document.body.style.background = `linear-gradient(45deg, ${color[0]}, ${color[1]})`;
+    } else {
+        return;
+    }
+
     // if(randomColor1 !== randomColor2){
-    //     document.body.style.backgroundImage = `linear-gradient(45deg, ${randomColor1}, ${randomColor2})`;
+    //     document.body.style.background = `linear-gradient(45deg, ${color[0]}, ${color[1]})`;
     // } else {
-    //     randomColor();
+    //     return false;
     // }
 }
 
