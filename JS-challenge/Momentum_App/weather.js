@@ -1,7 +1,5 @@
 
 //API key 숨기기
-
-
 const weather = document.querySelector("#weather span:first-child");
 console.log(weather);
 const city = document.querySelector("#weather span:last-child");
@@ -25,10 +23,10 @@ console.log(url);
       city.innerText = data.name;
       console.log(data.weather);
       console.log(data.weather.main);
-      if(data.weather[0].main == 
-        'Clear'){
+
+      if(data.weather[0].main =='Clear'){
           weather.innerText = '☀️' + `${data.weather[0].main} / ${data.main.temp}`;
-        } else if(data.weather[0].main == 'Cloud'){
+        } else {
           weather.innerText = '🌥' + `${data.weather[0].main} / ${data.main.temp}`;
         }
     });
