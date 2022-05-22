@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
-    <form id="login-form">
+    <form class="hidden" id="login-form">
         <input required maxlength="15" type="text" placeholder="15자 이내로 이름을 입력하세요.">
         <button>Log In</button>
     </form>
-
+    
     <h2 id="clock">00:00:00</h2>
-     <!-- <form class="hidden" id="login-form"></form> -->
-    <h1 class="hidden" id="greeting"></h1> 
+    <!-- <form class="hidden" id="login-form"></form> -->
     <form id="todo-form">
         <input type="text" placeholder="Write a To Do list  and Press Enter button" required>
     </form>
+    <h1 class="hidden" id="greeting"></h1> 
+    
     <ul id="todo-list"></ul>
     <div id="quote">
         <span></span>
@@ -30,7 +30,6 @@
         <span></span>
     </div>
     <script src="./app.js"></script>
-    <script src="./greeting.js"></script>
     <script src="./clock.js"></script>
     <script src="./quotes.js"></script>
     <script src="./background.js"></script>
