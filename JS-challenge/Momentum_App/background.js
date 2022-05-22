@@ -7,4 +7,12 @@ const background = document.createElement("img");
 
 background.src = `images/${chosenImage}`;
 
-document.body.appendChild(background);
+// const main = document.querySelector('.container');
+
+// main.innerHTML += 'background';
+
+// main.prepend(background);
+
+document.body.prepend(background);
+
+// document.body.style.backgroundImage('background');
