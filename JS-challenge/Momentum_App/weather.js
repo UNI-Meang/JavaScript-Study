@@ -1,46 +1,40 @@
 
-// const weather = document.querySelector("#weather span:first-child");
-// const city = document.querySelector("#weather span:last-child");
+//API key 숨기기
 
-
-
-// function onGeoOk(position) {
-//     const lat = position.coords.latitude;
-//     const lon = position.coords.longitude;
-//     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-//     fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => {
-//         city.innerText = data.name;
-//         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-//     });
-    
-// }
-
-// function onGeoError() {
-//     alert("Can't find you. No weather for you.");
-// }
-
-
-// navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
 const weather = document.querySelector("#weather span:first-child");
+console.log(weather);
 const city = document.querySelector("#weather span:last-child");
-const API_KEY= "8b98f191aa0197e964338c5a8f558f9a";
-
+console.log(city);
+const API_KEY = config.apikey;
+console.log(config);
+console.log(API_KEY);
+// location 불러오기 success
 function onGeoOk(position) {
+  console.log(position);
   const lat = position.coords.latitude;
   const lng = position.coords.longitude;
   console.log("You live in", lat, lng);
   const lon = position.coords.longitude;
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+console.log(url);
+//data를 못받아옴
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      console.log(data.weather);
+      console.log(data.weather.main);
+      if(data.weather[0].main == 
+        'Clear'){
+          weather.innerText = '☀️' + `${data.weather[0].main} / ${data.main.temp}`;
+        } else if(data.weather[0].main == 'Cloud'){
+          weather.innerText = '🌥' + `${data.weather[0].main} / ${data.main.temp}`;
+        }
     });
 }
+//location 불러오기 fail
 function onGeoError() {
   alert("Can't find you. No weather for you.");
 }
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
