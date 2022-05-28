@@ -1,26 +1,31 @@
 const quotes = [
     {
-        quote: "SHAPE UP OR SHIP OUT",
-        author: "ME",
+        quote: "Invest in renewable energy. ",
+        author: "YES, YOU CAN CHANGE!",
     },
     {
-        quote: "Keep going",
-        author: "You",
+        quote: "Keep fossil fuels in the ground.",
+        author: "YES, YOU CAN CHANGE!",
     },
     { 
-        quote: "You only live once, but if you do it right, once is enough.",
-        author: "Mae West",
+        quote: "Improve farming and encourage vegan diets",
+        author: "YES, YOU CAN CHANGE!",
     },
   {
-    quote: "Never go on trips with anyone you do not love.",
-    author: "Hemmingway",
+    quote: "Reduce how much people consume.",
+    author: "YES, YOU CAN CHANGE!",
+  },
+  {
+    quote: "Reduce plastic.",
+    author: "YES, YOU CAN CHANGE!",
   },
 ];
 
 
 const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+// const author = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+// quote.innerText = todaysQuote.quote;
+quote.innerHTML = `<p class = "quote-txt"> ${todaysQuote.quote} </p>;`
+// author.innerText = todaysQuote.author;
