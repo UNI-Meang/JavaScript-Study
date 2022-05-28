@@ -9,6 +9,6 @@ function getClock() {
 }
 
 getClock();
-// setInterval(sayHello, 5000);
+
 
 setInterval(getClock, 1000);
