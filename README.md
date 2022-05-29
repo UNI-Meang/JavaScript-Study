@@ -13,4 +13,12 @@
 * [catch-bubble](https://uni-meang.github.io/JavaScript-Study/catch-bubble/) 
 * [modal](https://uni-meang.github.io/JavaScript-Study/modal/)
 * [SPA]
+
+# JavaScript-Challenge
+
+## 일정
+22.05.09 ~ 22.05.23 
+
+## 과제
+
 * [momentum](https://uni-meang.github.io/JavaScript-Study/Momentum_App)
