@@ -1,4 +1,4 @@
-# JavaScript-Study
+# 1. JavaScript-Study
 
 ## 일정
 22.02.07 ~ 22.03.10 Every mon, thur 19:00 ~ 22:00 
@@ -14,7 +14,7 @@
 * [modal](https://uni-meang.github.io/JavaScript-Study/JavaScript-study/carousel/)
 
 
-# JavaScript-Challenge
+# 2. JavaScript-Challenge
 
 ## 일정
 22.05.09 ~ 22.05.23 
@@ -22,3 +22,6 @@
 ## 과제
 
 * [momentum](https://uni-meang.github.io/JavaScript-Study/JS-challenge/Momentum_App/)
+
+# 3. JavaScript-Project
+
